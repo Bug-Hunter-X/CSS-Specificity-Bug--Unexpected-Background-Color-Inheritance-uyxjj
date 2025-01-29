@@ -1,0 +1,17 @@
+The following CSS code snippet demonstrates an uncommon issue related to specificity and inheritance.  The `.container` class has a background color, but the nested `<p>` tag's background color overrides it due to specificity.
+
+```css
+.container {
+  background-color: lightblue;
+}
+
+p {
+  background-color: lightcoral;
+}
+
+.container p {
+  background-color: lightgreen; /* This style should override lightcoral, but doesn't always */
+}
+```
+
+In some cases, depending on other styles and browser inconsistencies, the `lightgreen` might not override `lightcoral`. This can be subtle and hard to debug.
