@@ -1,0 +1,17 @@
+The solution involves using the `!important` flag to force the desired style to override the less specific style. While generally discouraged for overuse, it is effective in this specific scenario.
+
+```css
+.container {
+  background-color: lightblue;
+}
+
+p {
+  background-color: lightcoral;
+}
+
+.container p {
+  background-color: lightgreen !important; /* Force the override with !important */
+}
+```
+
+This ensures that `lightgreen` will always override `lightcoral`, resolving the unexpected inheritance issue.
